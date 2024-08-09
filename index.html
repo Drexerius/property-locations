@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Локации</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="logo">
+        <img src="img/exit.png" alt="exit">
+    </header>
+
+    <main>
+        <aside>
+            <nav>
+                <a href="#" class="property"><img src="img/nav1.png" alt="nav1">Имущество</a>
+                <a href="#" class="inventory"><img src="img/nav2.png" alt="nav2">Инвентаризация</a>
+                <a href="#" class="staff"><img src="img/nav3.png" alt="nav3">Сотрудники</a>
+                <a href="#" class="notifications"><img src="img/nav4.png" alt="nav4">Уведомления</a>
+                <a href="#" class="locations"><img src="img/nav5.png" alt="nav5">Локации</a>
+                <a href="pages/settings.html" class="settings"><img src="img/nav6.png" alt="nav6">Настройки</a>
+            </nav>
+            <button><img src="img/left-arrow.png" alt="left-arrow">Скрыть меню</button>
+        </aside>
+
+        <section class="content">
+            <h1>Локации / Все локации</h1>
+            <div class="locations-menu">
+                <button>Все локации</button>
+                <button>Импорт/Экспорт</button>
+                <button>Настройки</button>
+            </div>
+            <button class="add"><img src="img/add.png" alt="add"> СОЗДАТЬ ЛОКАЦИЮ</button>
+            <div class="locations-list">
+                <div class="location">
+                    <img src="img/minus.png" alt="minus">
+                    <img src="img/dots.png" alt="dots">
+                    <p>Локация 1</p>
+                    <span>512</span>
+                    <button class="redact"><img src="img/redact.png" alt="redact">Редактировать</button>
+                    <button><img src="img/cross.png" alt="remove">Удалить</button>
+                </div>
+                <div class="location sublocation1">
+                    <img src="img/plus.png" alt="minus">
+                    <img src="img/dots.png" alt="dots">
+                    <p>Подотдел 1</p>
+                    <span>10</span>
+                    <p>Для утерь</p>
+                </div>                
+                <div class="location sublocation1">
+                    <img src="img/minus.png" alt="minus">
+                    <img src="img/dots.png" alt="dots">
+                    <p>Подотдел 2</p>
+                    <span>100</span>
+                </div>
+                <div class="location sublocation2">
+                    <img src="img/dots.png" alt="dots">
+                    <p>Подподотдел 1</p>
+                    <span>2</span>
+                    <p>Виртуальная</p>
+                    <p><b>Без штрихкода</b></p>
+                </div>
+                <div class="location sublocation1">
+                    <img src="img/plus.png" alt="minus">
+                    <img src="img/dots.png" alt="dots">
+                    <p>Подотдел 3</p>
+                    <span>400</span>
+                </div>
+                <div class="location">
+                    <img src="img/plus.png" alt="minus">
+                    <img src="img/dots.png" alt="dots">
+                    <p>Локация 2</p>
+                    <span>100</span>
+                </div>
+                <div class="location">
+                    <img src="img/plus.png" alt="minus">
+                    <img src="img/dots.png" alt="dots">
+                    <p>Локация 3</p>
+                    <span>100</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="misc">
+            <button><img src="img/refresh.png" alt="refresh"> СИНХРОНИЗАЦИЯ <span>(17.05.2024 15:23:21)</span></button>
+            <form action="#">
+                <label for="exact"><input type="checkbox" id="exact"> Поиск по точному вхождению</label>
+                <input type="search" placeholder=" ПОИСК">
+            </form>
+        </section>
+
+        <div class="popup-container">
+            <div class="create-location">
+                <h1>Создать локацию</h1>
+                <form action="#">
+                    <input type="text" placeholder="Название">
+                    <input type="text" placeholder="Штрихкод">
+                    <input type="text" placeholder="RFID">
+                    <select name="nesting" id="nesting">
+                        <option value="" disabled selected>Вложенность</option>
+                        <option value="loc1">Локация1</option>
+                        <option value="loc2">Локация2</option>
+                        <option value="loc3">Локация3</option>
+                    </select>
+                    <div class="switch-container">
+                        <p>Виртуальная локация</p>
+                        <label for="virtual-loc" class="switch">
+                            <input type="checkbox" id="virtual-loc">
+                            <span class="slider"></span>
+                        </label>                
+                    </div>
+                    <div class="switch-container">
+                        <p>Локация для утерь</p>
+                        <label for="lost-loc" class="switch">
+                            <input type="checkbox" id="lost-loc">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="create">
+                            <img src="img/save.png" alt="save">
+                            <input type="submit" id="create" value="СОЗДАТЬ">
+                        </label>
+                        <button class="cancel">ОТМЕНИТЬ</button>
+                    </div>
+                </form>
+            </div>
+            <div class="create-location edit-location">
+                <h1>Изменить локацию</h1>
+                <form action="#">
+                    <div>
+                        <p>Название</p>
+                        <input type="text" placeholder="Название" value="Локация 11">
+                    </div>
+                    <div>                    
+                        <p>Штрихкод</p>
+                        <input type="text" placeholder="Штрихкод" value="3131313131">
+                    </div>
+                    <div>                    
+                        <p>RFID</p>
+                        <input type="text" placeholder="RFID" value="3131313131">
+                    </div>
+                    <div>                    
+                        <p>Вложенность</p>
+                        <select name="nesting" id="nesting">
+                            <option value="" disabled>Вложенность</option>
+                            <option value="loc1" selected>Локация1</option>
+                            <option value="loc2">Локация2</option>
+                            <option value="loc3">Локация3</option>
+                        </select>
+                    </div>
+                    <div class="switch-container">
+                        <p>Виртуальная локация</p>
+                        <label for="virtual-loc2" class="switch">
+                            <input type="checkbox" id="virtual-loc2">
+                            <span class="slider"></span>
+                        </label>                
+                    </div>
+                    <div class="switch-container">
+                        <p>Локация для утерь</p>
+                        <label for="lost-loc2" class="switch">
+                            <input type="checkbox" id="lost-loc2">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <button><img src="img/cross2.png" alt="delete">УДАЛИТЬ</button>
+                        <button class="cancel">ОТМЕНИТЬ</button>
+                        <label for="create">
+                            <img src="img/save.png" alt="save">
+                            <input type="submit" id="create" value="СОЗДАТЬ">
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div></div>
+        <div class="last-info">
+            <p>Последний приём 20.09.2021 18:36:21</p>
+            <p>Последняя передача 20.09.2021 18:38:21</p>
+        </div>
+        <a href="#"><img src="img/docs.png" alt="docs"> Документация</a>
+        </div>
+    </footer>
+    <div class="shade"></div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

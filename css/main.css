@@ -1,0 +1,450 @@
+:root {
+    --orange: #FF6600;
+    --dark: #172139;
+    --gray: #A5A5A5;
+    --light-gray: #e0e0e0;
+    --font-gen: 'Roboto', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-gray);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 30px 0 15px;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-grow: 1;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 420px;
+    width: 290px;
+    margin: 0;
+    font-family: var(--font-gen);
+    user-select: none;
+    background-color: white;
+}
+aside nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+    width: 100%;
+}
+aside nav a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 62px;
+    padding: 20px 15px;
+    border: 1px var(--light-gray) solid;
+}
+aside nav a img {
+    padding-right: 15px;
+    margin: 0;
+}
+aside nav a.locations {
+    background: var(--dark);
+    color: white;
+}
+aside button {
+    background: none;
+    color: var(--orange);
+    border: 0;
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+aside button img {
+    margin-right: 15px;
+}
+
+section.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: start;
+    margin: 0 30px 0 30px;
+}
+section.content h1 {
+    font-family: var(--font-gen);
+    font-size: 26px;
+    margin: 0 0 25px 0;
+}
+section.content div.locations-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 480px;
+}
+section.content div.locations-menu button {
+    background: white;
+    color: black;
+    height: 40px;
+    width: 140px;
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+section.content div.locations-menu button:first-child {
+    background: var(--dark);
+    color: white;
+}
+section.content > button {
+    background: var(--dark);
+    color: white;
+    border: 0;
+    width: 300px;
+    height: 50px;
+    font-size: 15px;
+    margin: 10px 0 25px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.content > button img {
+    margin-right: 10px;
+}
+section.content > div.locations-list {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    height: 400px;
+}
+section.content > div.locations-list > div.location {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center;
+    width: 480px;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 0 10px;
+    gap: 15px;
+}
+section.content > div.locations-list > div.location p:nth-child(3) {
+    font-weight: 600;
+    font-size: 15px;;
+}
+section.content > div.locations-list > div.location span {
+    color: var(--orange);
+    margin: 0 15px 0 15px;
+}
+section.content > div.locations-list button {
+    border: 0;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 5px;
+    color: var(--orange);
+}
+section.content > div.locations-list button:hover {
+    color: rgb(221, 52, 0);
+}
+section.content > div.locations-list > div.location > img {
+    cursor: pointer;
+}
+section.content > div.locations-list > div.sublocation1 {
+    margin-left: 50px;
+}
+section.content > div.locations-list > div.sublocation2 {
+    margin-left: 110px;
+}
+
+section.misc {
+    font-family: var(--font-gen);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: right;
+    width: 600px;
+    height: 100px;
+    margin: 50px 30px;
+    user-select: none;
+}
+section.misc button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 350px;
+    height: 50px;
+    font-size: 15px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    background: var(--dark);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+section.misc button span {
+    font-size: 13px;
+    letter-spacing: normal;
+}
+section.misc form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+section.misc label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 250px;
+    margin-right: 20px;
+}
+section.misc input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border: 1px solid var(--orange);
+    border-radius: 3px;
+}
+section.misc input[type="checkbox"]:checked {
+    background: url(../img/check.png);
+}
+section.misc input[type="search"] {
+    background: url(../img/search-icon.png);
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    padding: 10px 5px 10px 25px;
+    margin-right: 10px;
+    width: 300px;
+    border: 0;
+}
+
+div.popup-container {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    display: none;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+div.create-location {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 440px;
+    background: white;
+    padding: 25px 0;
+}
+div.create-location h1 {
+    margin: 0 0 20px 0;
+}
+div.create-location form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;;
+    width: 80%;
+}
+div.create-location form > input, select {
+    width: 100%;
+    height: 50px;
+    border: var(--gray) 1px solid;
+    border-radius: 5px;
+    background-color: #dbdada;
+    padding: 0 25px;
+}
+div.create-location div:last-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+div.create-location div:last-child button {
+    background: white;
+    color: black;
+    height: 40px;
+    width: 140px;
+    border: 1px black solid;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 45%;
+    cursor: pointer;
+}
+div.create-location label[for="create"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: var(--dark);
+    color: white;
+    height: 40px;
+    width: 140px;
+    border: 0;
+    border-radius: 5px;
+    width: 45%;
+    font-weight: bold;
+    cursor: pointer;
+}
+div.create-location label[for="create"] input {
+    border: 0;
+    background: 0;
+    color: white;
+    cursor: pointer;
+}
+div.create-location div.switch-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: var(--font-gen);
+}
+div.create-location .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+div.create-location .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+div.create-location .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+div.create-location .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%
+}
+div.create-location input:checked + .slider:before {
+    transform: translateX(26px);
+    background-color: var(--orange);
+}
+
+div.edit-location form > div {
+    width: 100%;
+}
+div.edit-location form > div > input, select {
+    width: 100%;
+    height: 50px;
+    border: var(--gray) 1px solid;
+    border-radius: 5px;
+    background-color: #dbdada;
+    padding: 0 25px;
+}
+div.edit-location div:last-child {
+    flex-wrap: wrap;
+    gap: 15px;
+}
+div.edit-location div:last-child label {
+    width: 100%;
+}
+div.edit-location div:last-child button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+div.shade {
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    margin-top: auto;
+    height: 80px;
+    background-color: white;
+}
+footer div.last-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 500px;
+    color: var(--gray);
+    font-size: 13px;
+    
+}
+footer a {
+    color: #FF6600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+}
